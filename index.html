@@ -5,36 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Question Generator</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prima+Sans&display=swap" rel="stylesheet">
+
     <style>
         body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
 
-.container {
-    text-align: center;
-}
+        .container {
+            text-align: center;
+        }
 
-.question-display {
-    font-size: 1.5em;
-    margin-top: 20px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
+        .question-display {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            color: rgb(244, 66, 66);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            width: 400px;
+            font-size: 1.5em;
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+   
+        /* Style for the generate button */
+        #generateBtn {
+            font-family: 'Prima Sans';
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
+        #generateBtn:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <div id="result" class="question-display">Made by Eden and Brian for uncle Mel</div>
+        <br>
         <button id="generateBtn">Generate Random Question</button>
-        <div id="result" class="question-display"></div>
     </div>
+    
     <script src="script.js"></script>
 
     <script>
@@ -87,3 +116,6 @@ function generateRandomQuestion() {
     </script>
 </body>
 </html>
+
+
+    
