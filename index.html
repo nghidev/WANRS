@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Question Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+.question-display {
+    font-size: 1.5em;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="generateBtn">Generate Random Question</button>
+        <div id="result" class="question-display"></div>
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+        const generateBtn = document.getElementById('generateBtn');
+const resultDiv = document.getElementById('result');
+
+const questions = [
+    "What's a childhood memory that never fails to make you smile?",
+    "If you could have a heart-to-heart conversation with anyone, who would it be and why?",
+    "What's a quality in a friend that you highly value and appreciate?",
+    "Share a moment when someone's kindness made a significant impact on your life.",
+    "What's a book, movie, or song that you feel a strong emotional connection to?",
+    "Describe a challenge you faced that ultimately made you a stronger person.",
+    "What's something you've been curious about lately and want to explore further?",
+    "If you could offer your younger self a piece of advice, what would it be?",
+    "Share a personal accomplishment that you're particularly proud of.",
+    "What's a goal or dream you've put on hold, and why?",
+    "Describe a situation where stepping out of your comfort zone led to positive change.",
+    "What's a trait or skill you admire in others that you're working on developing in yourself?",
+    "If you had an extra hour each day, how would you spend it?",
+    "What's a lesson you learned from a past mistake that you now apply to your life?",
+    "Share a place that holds special meaning to you and the story behind it.",
+    "What's a cultural experience you've had that broadened your perspective?",
+    "If you could dedicate your life to solving one global issue, what would it be and why?",
+    "What's a hobby or passion that helps you feel most like yourself?",
+    "Describe a time when a change of scenery had a positive impact on your mindset.",
+    "Share a quote or philosophy that guides your decision-making.",
+    "What's an important relationship in your life that shaped who you are today?",
+    "If you could learn the answer to any question, what would you ask?",
+    "Describe a time when you felt truly connected to nature or the world around you.",
+    "What's a small gesture that someone recently did for you that made your day?",
+    "Share a moment when you realized the power of vulnerability in connecting with others.",
+    "What's something you believe in strongly that not everyone agrees with?",
+    "Describe an event or experience that taught you the value of empathy.",
+    "If you could share a meal with anyone, living or deceased, who would it be and why?",
+    "What's a personal mantra or affirmation that helps you stay grounded?",
+    "Share a moment when you felt a profound sense of gratitude.",
+    "These questions are designed to encourage open and meaningful conversations that help build stronger connections between individuals."
+];
+
+
+generateBtn.addEventListener('click', generateRandomQuestion);
+
+function generateRandomQuestion() {
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    const randomQuestion = questions[randomIndex];
+    resultDiv.textContent = randomQuestion;
+}
+
+    </script>
+</body>
+</html>
